@@ -3,14 +3,13 @@
   %small
     #{@bank_account.client}
 
-= button_tag :new_transaction, id: "btn-new-transaction", class: "btn btn-primary" do
-  Нова Транзакція
+= button_tag :new_transaction, id: "btn-new-transaction", style: "margin-left: 10px;", class: "btn btn-primary" do
+  New Transaction
+= link_to client_path(@bank_account.client.id),style: "margin-left: 10px;", class: "btn btn-default" do
+  Back to #{@bank_account.client}
 
-= link_to client_path(@bank_account.client.id), class: "btn btn-default" do
-  Повернутися до #{@bank_account.client}
-
-= link_to bank_accounts_path, class: "btn btn-default" do
-  Повернутися до Банківськіх Рахункiв
+= link_to bank_accounts_path,style: "margin-left: 10px;", class: "btn btn-default" do
+  Back to Bank Accounts
 
 
 %table.table.table-bordered
@@ -33,10 +32,10 @@
 #parameters{ data: { bank_account_id: @bank_account.id} }
 
 = link_to edit_bank_account_path(@bank_account.id), class: "btn btn-info" do
-  Редагувати Банківський Рахунок
+  Edit Bank Account
 
-= link_to bank_account_path(@bank_account.id), method: :delete, class: "btn btn-danger",data: { confirm: "Ви Впевненi?" }  do
-  Видалити Банківський Рахунок
+= link_to bank_account_path(@bank_account.id), method: :delete,style: "margin-left: 10px;", class: "btn btn-danger",data: { confirm: "You sure?" }  do
+  Delete Bank Account
 
 #modal-transaction.modal.fade.modal-fade
   .modal-dialog

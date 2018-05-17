@@ -1,4 +1,5 @@
 = simple_form_for client do |f|
+  %hr
   .row
     .col-md-12
       = f.input :client_number, input_html: { class: "form-control" }
@@ -11,11 +12,10 @@
       = f.input :last_name, input_html: { class: "form-control" }
   %hr
   = button_tag type: :submit, class: "btn btn-primary" do
-    Зберегти Акаунт
+    Save Client
   - if client.new_record?
-    = link_to clients_path, class: "btn btn-default" do
-      Скасувати
-    else
+    = link_to clients_path, class: "btn btn-default", style: "margin-left: 10px;" do
+      Cancel
   - else
-    = link_to client_path(client.id), class: "btn btn-default" do
-      Скасувати
+    = link_to client_path(client.id), class: "btn btn-default",style: "margin-left: 10px;" do
+      Cancel

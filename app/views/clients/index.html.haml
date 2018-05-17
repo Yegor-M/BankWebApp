@@ -1,7 +1,7 @@
 %h1
   Clients Database
 
-= link_to new_client_path,class: "btn btn-primary" do
-  Новий Акаунт
-  
+= link_to new_client_path,class: "btn btn-primary", style: "margin-bottom: 20px; margin-top: 20px;" do
+  New Client
+
 = render partial: "list", locals: {clients: @clients}

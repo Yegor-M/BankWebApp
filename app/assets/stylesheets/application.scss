@@ -1,19 +1,119 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+ $white: #ededed;
 
+ @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+ @import url('https://fonts.googleapis.com/css?family=Arvo');
  @import "bootstrap-sprockets";
  @import "bootstrap";
- 
+
+h1,h2,h3,label {
+  font-family: "Fjalla One", sans-serif;
+  color: #424f5d;
+}
+h1 {
+  margin-bottom: 20px;
+}
+table {
+  margin-top: 20px;
+}
+label {
+  font-weight: 300;
+  font-size: 30px;
+}
+h2 {
+  font-size:23px;
+  color: #5a697a!important;
+}
+#table {
+  margin-top: 70px;
+}
+h3 {
+  font-size: 23px;
+  display: inline-block;
+  padding-right: 20px;
+}
+p,td,th {
+  font-family: 'Arvo', serif;
+}
+td {
+  font-size: 15px;
+}
+th {
+  font-size: 18px;
+  font-weight: 200;
+}
+hr {
+  border-top: 1px solid #e0dede;
+ }
+body {
+  background: $white;
+}
+
+#sign_out {
+  position: absolute;
+  right: 40px;
+  top:20px;
+}
+  #image {
+  animation: bounce_831 4.6s ease infinite;
+  transform-origin: 50% 50%;
+  position: absolute;
+  top:15px;
+  left:20px;
+
+@keyframes bounce_831 {
+  0% { transform:translateY(0) }
+  5.55556% { transform:translateY(0) }
+  11.11111% { transform:translateY(0) }
+  22.22222% { transform:translateY(-15px) }
+  27.77778% { transform:translateY(0) }
+  33.33333% { transform:translateY(-15px) }
+  44.44444% { transform:translateY(0) }
+  100% { transform:translateY(0) }
+}
+}
+.indicators {
+  margin-right: 20px;
+  display: inline;
+  position: absolute;
+  top:10px;
+  right:10%;
+}
+.btn-danger:hover {
+  color: #d9534f;
+  background-color: $white;
+}
+.btn-primary:hover {
+  color:#337ab7;
+  background-color: $white;
+}
+.btn-default:hover {
+  color:#ccc;
+  background-color: $white;
+}
+.btn-dark:hover {
+  color:#525c66;
+  background-color: $white;
+  border-color: #2b3238;
+}
+.btn-info:hover {
+  background-color: $white;
+  color:#5bc0de;
+}
+.btn {
+   transition: All 0.4s ease;
+   font-size: 18px;
+}
+ .btn-dark {
+   background-color: #525c66;
+   color: #fff;
+ }
+
+#user_login,#user_password {
+  width: 50%;
+}
+.form-actions {
+  margin-top: 3%;
+}
+.form-inputs {
+  margin-top: 8%;
+}

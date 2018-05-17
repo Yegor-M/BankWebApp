@@ -3,9 +3,9 @@
   %small
     #{@client.client_number}
 
-= link_to edit_client_path(@client), class: "btn btn-info" do
-  Редагувати Акаунт
+= link_to edit_client_path(@client), class: "btn btn-info",style: "margin-bottom: 20px;" do
+  Edit Client
 
-= link_to new_client_bank_account_path(@client.id),class: "btn btn-primary"  do
-  Новий Банкiвський Рахунок
+= link_to new_client_bank_account_path(@client.id),class: "btn btn-primary", style: "margin-left:10px; margin-bottom:20px;"  do
+  New Bank Account
 = render partial: "bank_accounts", locals: {bank_accounts: @client.bank_accounts}

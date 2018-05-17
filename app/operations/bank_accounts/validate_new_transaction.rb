@@ -22,13 +22,13 @@ module BankAccounts
 
     def validate_withdrawal!
       if @bank_account.balance - @amount < 0.00
-          @errors << "Недостатньо Коштів("
+          @errors << "Not Enough Costs"
       end
     end
 
     def validate_existance_of_account!
         if @bank_account.blank?
-          @errors << "Акаунт не знайден("
+          @errors << "Account not found"
         end
     end
   end

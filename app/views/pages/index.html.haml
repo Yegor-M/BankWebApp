@@ -1,23 +1,24 @@
-%h1
+%h1{ :style => "font-size:40px;" }
   My Bank
 
-.row
-  .col-md-12
-    %h2
+.indicators
+  %h3
     Number of Accounts: #{number_of_accounts}
-    %h2
+  %h3
     Number of Clients: #{number_of_clients}
 
-.row
-  .col-md-12
-    = link_to clients_path do
-      Clients
-    %hr
-    = link_to new_client_path do
-      New Client
-    %hr
-    = link_to bank_accounts_path do
-      Bank Accounts
-    %hr
-    = link_to new_bank_account_path do
-      New Bank Account
+#table
+  .row
+    .col-md-12
+      = link_to clients_path, class: "btn btn-dark" do
+        Clients
+      %hr
+      = link_to new_client_path, class: "btn btn-dark" do
+        New Client
+      %hr
+      = link_to bank_accounts_path, class: "btn btn-dark" do
+        Bank Accounts
+      %hr
+      = link_to new_bank_account_path, class: "btn btn-dark" do
+        New Bank Account
+      %hr
